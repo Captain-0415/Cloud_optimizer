@@ -1,0 +1,143 @@
+<h1>AWS EC2</h1>
+
+<mat-accordion>
+
+	<mat-expansion-panel> 
+	<mat-expansion-panel-header>
+
+	<mat-panel-title class="aws-instances-title">
+	AWS Instances
+	</mat-panel-title>
+
+</mat-expansion-panel-header>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+<div fxFlex="400">
+	<div class="mat-elevation-z8">
+		<div fxLayout fxLayoutAlign="center center">
+			<mat-form-field fxFlex="40%">
+	</mat-form-field>
+	</div>
+
+	<div class="mat-elevation-z2 table-layout">
+		<table mat-table #instancesSort="matSort" [dataSource]="dataSource1" matSort>
+		<!-- ID Column-->
+		<ng-container matColumnDef="id">
+			<th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+			<td mat-cell *matCellDef="let row">{{row.instance_id}}</td>
+		</ng-container>
+
+		<!-- Name Column-->
+                <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                        <td mat-cell *matCellDef="let row">{{row.instance_name}}</td>
+                </ng-container>
+
+		<!-- Owner Column-->
+                <ng-container matColumnDef="owner">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Owner </th>
+                        <td mat-cell *matCellDef="let row">{{row.owner}}</td>
+                </ng-container>
+
+		<!-- Purpose Column-->
+                <ng-container matColumnDef="purpose">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Purpose </th>
+                        <td mat-cell *matCellDef="let row">{{row.purpose}}</td>
+                </ng-container>
+
+		<!-- State Column-->
+                <ng-container matColumnDef="state">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> State </th>
+                        <td mat-cell *matCellDef="let row">{{row.state}}</td>
+                </ng-container>
+
+		<!-- Age Column-->
+                <ng-container matColumnDef="age">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Age(Days) </th>
+                        <td mat-cell *matCellDef="let row">{{row.age}}</td>
+                </ng-container>
+
+		<!-- DND Column-->
+                <ng-container matColumnDef="dnd">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> DND </th>
+                        <td mat-cell *matCellDef="let row">{{row.dnd}}</td>
+                </ng-container>
+
+		<!-- Instance Type Column-->
+                <ng-container matColumnDef="instance_type">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Instance_Type </th>
+                        <td mat-cell *matCellDef="let row">{{row.instance_type}}</td>
+                </ng-container>
+
+		<!-- Public IP Column-->
+                <ng-container matColumnDef="public_ip">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Public IP </th>
+                        <td mat-cell *matCellDef="let row">{{row.public_ip}}</td>
+                </ng-container>
+
+		<!-- region Column-->
+                <ng-container matColumnDef="region">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header> Region </th>
+                        <td mat-cell *matCellDef="let row">{{row.region}}</td>
+                </ng-container>
+
+		<tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+		<tr mat-row *matRowDef = "let row; columns: displayedColumns1;">
+		</tr>
+
+		</table>
+	</div>
+	<mat-paginator #instancesPaginator="matPaginator" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+	</div>
+</div>
+</div>
+	</mat-expansion-panel>
+</mat-accordion>
+	
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<mat-accordion>
+
+<mat-expansion-panel>
+
+<mat-expansion-panel-header>
+
+<mat-panel-title class="aws-instances-title">
+
+AWS Deleted Instances
+
+</mat-panel-title>
+
+</mat-expansion-panel-header>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+
+<div fxFlex="400">
+
+<div class="mat-elevation-z8">
+
+<div fxLayout fxLayoutAlign="center center">
+
+<mat-form-field fxFlex="40%">
+
+<input matInput type="text" placeholder="Search">
+
+</mat-form-field>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</mat-expansion-panel>
+
+</mat-accordion>
+

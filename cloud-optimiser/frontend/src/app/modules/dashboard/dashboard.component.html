@@ -1,0 +1,137 @@
+<h1 id="aws-resources"> AWS Resources </h1>
+<!-- <mat-accordion> -->
+
+<mat-expansion-panel>
+
+<mat-expansion-panel-header> 
+<mat-panel-title>
+Report
+</mat-panel-title>
+</mat-expansion-panel-header>
+
+<div fxlayout="row" fxLayoutAlign="center" fxLayoutGap="20px" class="stats-cards"> 
+<mat-card class="cost-saved" fxFlex="25">
+
+<b>Cost saved Today:</b>
+
+</mat-card>
+
+<mat-card class="cost-saved" fxFlex="25">
+
+<b>Cost Saved This Month:</b>
+
+</mat-card>
+
+</div>
+
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<div fxlayout="row" fxlayoutAlign="space-between center" fxLayoutGap="20px" class="stats-card">
+
+<mat-card class="resources" fxFlex="25"> 
+<b>Total Deleted instances:</b>
+</mat-card>
+
+<mat-card class="resources" fxFlex="25"> 
+<b>Total Deleted Volumes:</b>
+</mat-card>
+
+<mat-card class="resources" fxFlex="25"> 
+<b>Total Deleted Snapshots:</b>
+</mat-card>
+
+<mat-card class="resources" fxFlex="25"> 
+<b>Total Deleted AMIS:</b>
+</mat-card>
+
+</div>
+<br>
+
+<div fxlayout="row" fxLayoutAlign="center" fxLayoutGap="20px" class="stats-card"> 
+<mat-card class="resources" fxFlex="25">
+<b>Total Deleted EIPs:</b>
+</mat-card>
+
+<mat-card class="resources" fxFlex="25">
+<b>Total Deleted ENIS:</b>
+</mat-card>
+
+</div>
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<mat-accordion>
+
+<mat-expansion-panel> 
+<mat-expansion-panel-header>
+<mat-panel-title style="color: orangered;">
+
+AWS Instances Running more than 2 day or DND Instances Without Owner or Purpose 
+
+</mat-panel-title>
+
+</mat-expansion-panel-header>
+
+<div fxlayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+
+<div fxFlex="400">
+
+<div class="mat-elevation-z8"> 
+<div fxLayout fxLayoutAlign="center center"> 
+<mat-form-field fxFlex="40%">
+<input matInput type="text" placeholder="Search" >
+</mat-form-field>
+</div>
+
+<mat-paginator #instancesViolPaginator="matPaginator" [pageSize]="10" [pageSizeOptions]="[5,10,25,100]"></mat-paginator>
+</div>
+</div>
+</div>
+</mat-expansion-panel>
+</mat-accordion>
+<br>
+
+<mat-divider></mat-divider>
+
+<br>
+
+<mat-accordion>
+
+<mat-expansion-panel> 
+<mat-expansion-panel-header>
+<mat-panel-title style="color: orangered;">
+
+AWS Instances not used more than 3 days (These will be auto-deleted). 
+
+</mat-panel-title>
+
+</mat-expansion-panel-header>
+
+<div fxlayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+
+<div fxFlex="400">
+
+<div class="mat-elevation-z8"> 
+<div fxLayout fxLayoutAlign="center center"> 
+<mat-form-field fxFlex="40%">
+<input matInput type="text" placeholder="Search"> </mat-form-field>
+</div>
+
+<mat-paginator #instancesViolPaginator="matPaginator" [pageSize]="10" [pageSizeOptions]="[5,10,25,100]"></mat-paginator>
+</div>
+</div>
+</div>
+</mat-expansion-panel>
+</mat-accordion>
+<br>
+
+<mat-divider></mat-divider>
+
+<br>

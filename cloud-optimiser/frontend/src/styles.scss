@@ -1,0 +1,32 @@
+html, body {height: 100%; } 
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } 
+a { font-size: 14px !important; }
+
+.panel-title {
+
+font-weight: 500;
+}
+.success {
+
+color: white;
+
+background-color: green;
+
+border: 1px solid;
+
+}
+
+.failure {
+
+color: white;
+
+background-color: red;
+
+border: 1px solid; }
+.table-layout {
+
+max-height: 550px;
+
+overflow: auto;
+
+width: 100%; }

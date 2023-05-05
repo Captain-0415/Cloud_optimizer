@@ -1,0 +1,38 @@
+<mat-nav-list>
+	<h3 matSubheader>Pages</h3>
+	
+	<a class="dashboard-link" mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard"> <mat-icon>home</mat-icon>
+Dashboard</a>
+	<mat-expansion-panel (opened)="panelOpenState = true"
+				(closed)="panelOpenState = false">
+
+		<mat-expansion-panel-header>
+	<mat-panel-title>
+		<mat-icon>cloud</mat-icon>
+ AWS Resources
+	</mat-panel-title>
+	</mat-expansion-panel-header>
+	<a mat-list-item routerLinkActive="list-item-active" routerLink="/aws-resources/instances">Instances</a>
+	<a mat-list-item routerLinkActive="list-item-active" routerLink="/aws-resources/volumes">Volumes</a>
+	<a mat-list-item routerlinkActive="list-item-active" routerlink="/aws-resources/snapshots">Snapshots</a>
+	<a mat-list-item routerLinkActive="list-item-active" routerLink="/aws-resources/amis">AMIs</a>
+	<a mat-list-item routerLinkActive="list-item-active" routerLink="/aws-resources/eips">EIPs</a>
+	<a mat-list-item routerLinkActive="list-item-active" routerlink="/aws-resources/enis">ENIS</a>
+	<a mat-list-item routerLinkActive="list-item-active" routerLink="/aws-resources/s3">S3 objects</a>
+	<a mat-list-item routerlinkActive="list-item-active" routerLink="/aws-resources/clusters">Clusters</a>
+	<a mat-list-item routerLinkActive="list-item-active" routerLink="/aws-resources/user-reports">User Reports</a>
+    </mat-expansion-panel>
+    
+    <mat-divider></mat-divider>
+
+<h3 matSubheader>Extras</h3>
+
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard/daily-cost-saved"> <mat-icon>attach_money</mat-icon>
+    Daily Cost saved
+</a>
+
+<a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard/aws-analysis">
+	<mat-icon>assessment</mat-icon>
+	AWS Analysis
+</a>
+</mat-nav-list>
